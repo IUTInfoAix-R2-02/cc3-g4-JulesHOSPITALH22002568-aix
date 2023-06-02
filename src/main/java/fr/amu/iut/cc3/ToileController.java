@@ -28,6 +28,7 @@ import java.util.ResourceBundle;
 
 public class ToileController implements Initializable {
 
+
     @FXML
     private TextField comp1;
 
@@ -70,8 +71,19 @@ public class ToileController implements Initializable {
     private void Trace(ActionEvent event) {
         TextField noteField = new TextField();
         noteField.setOnAction(this::Comp1);
+        noteField.setOnAction(this::Comp2);
+        noteField.setOnAction(this::Comp3);
+        noteField.setOnAction(this::Comp4);
+        noteField.setOnAction(this::Comp5);
+        noteField.setOnAction(this::Comp6);
 
         comp1.getChildrenUnmodifiable().add(noteField);
+        comp2.getChildrenUnmodifiable().add(noteField);
+        comp3.getChildrenUnmodifiable().add(noteField);
+        comp4.getChildrenUnmodifiable().add(noteField);
+        comp5.getChildrenUnmodifiable().add(noteField);
+        comp6.getChildrenUnmodifiable().add(noteField);
+
     }
 
     @FXML
@@ -87,9 +99,52 @@ public class ToileController implements Initializable {
     private void Comp1(ActionEvent event) {
         Circle circle = new Circle();
         int note = Integer.parseInt(comp1.getText());
-        circle.setCenterX(getXRadarChart( note,1));
-        circle.setCenterY(getYRadarChart(note,1));
+        if (note<=noteMaximale) {
+            circle.setCenterX(getXRadarChart(note, 1));
+            circle.setCenterY(getYRadarChart(note, 1));
+        }
     }
+
+    private void Comp2(ActionEvent event) {
+        Circle circle = new Circle();
+        int note = Integer.parseInt(comp2.getText());
+        if (note<=noteMaximale) {
+            circle.setCenterX(getXRadarChart(note, 1));
+            circle.setCenterY(getYRadarChart(note, 1));
+        }
+    }
+    private void Comp3(ActionEvent event) {
+        Circle circle = new Circle();
+        int note = Integer.parseInt(comp3.getText());
+        if (note<=noteMaximale) {
+            circle.setCenterX(getXRadarChart(note, 1));
+            circle.setCenterY(getYRadarChart(note, 1));
+        }
+    }
+    private void Comp4(ActionEvent event) {
+        Circle circle = new Circle();
+        int note = Integer.parseInt(comp4.getText());
+        if (note<=noteMaximale) {
+            circle.setCenterX(getXRadarChart(note, 1));
+            circle.setCenterY(getYRadarChart(note, 1));
+        }
+    }
+    private void Comp5(ActionEvent event) {
+        Circle circle = new Circle();
+        int note = Integer.parseInt(comp5.getText());
+        if (note<=noteMaximale) {
+            circle.setCenterX(getXRadarChart(note, 1));
+            circle.setCenterY(getYRadarChart(note, 1));
+        }
+    }private void Comp6(ActionEvent event) {
+        Circle circle = new Circle();
+        int note = Integer.parseInt(comp6.getText());
+        if (note<=noteMaximale) {
+            circle.setCenterX(getXRadarChart(note, 1));
+            circle.setCenterY(getYRadarChart(note, 1));
+        }
+    }
+
 
 
 }
