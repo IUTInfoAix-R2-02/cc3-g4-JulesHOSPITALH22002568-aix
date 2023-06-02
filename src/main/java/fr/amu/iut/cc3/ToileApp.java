@@ -18,7 +18,7 @@ public class ToileApp extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("toile.fxml"));
         primaryStage.setResizable(false);
         root.setStyle("-fx-background-color:#bcd0fb;");
-        Scene scene = new Scene(root, 600, 500);
+        Scene scene = new Scene(root, 875, 500);
         primaryStage.setScene(scene);
         primaryStage.setTitle("Résultats aux différentes compétences du BUT");
         primaryStage.show();

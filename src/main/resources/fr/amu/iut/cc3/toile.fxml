@@ -1,32 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.Group?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.shape.Circle?>
-<?import javafx.scene.shape.Line?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-
-<HBox id="scene" prefHeight="420.0" prefWidth="650.0" spacing="20.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" >
-    <Pane prefHeight="400.0" prefWidth="400.0" >
-        <Circle centerX="200.0" centerY="200.0" radius="200.0" styleClass="toile"/>
-        <Circle centerX="200.0" centerY="200.0" radius="150.0" styleClass="toile"/>
-        <Circle centerX="200.0" centerY="200.0" radius="100.0" styleClass="toile"/>
-        <Circle centerX="200.0" centerY="200.0" radius="50.0" styleClass="toile"/>
-        <Group layoutX="195.0" layoutY="195.0">
-            <Line endX="10.0" endY="5.0" startY="5.0" styleClass="croix"/>
-            <Line endX="5.0" endY="10.0" startX="5.0" styleClass="croix"/>
-        </Group>
-        <Line startX="200.0" startY="0" endX="200" endY="400.0" styleClass="toile"/>
-        <Line endX="200.0" endY="400.0" rotate="60.0" startX="200.0" styleClass="toile"/>
-        <Line endX="200.0" endY="400.0" rotate="120.0" startX="200.0" styleClass="toile"/>
-        <Text x="170" y="0" text="Compétence 1" />
-        <Text x="300" y="100" text="Compétence 2" />
-        <Text x="300" y="300" text="Compétence 3" />
-        <Text x="170" y="410" text="Compétence 4" />
-        <Text x="26" y="300" text="Compétence 5" />
-        <Text x="26" y="99" text="Compétence 6" />
-        <Pane fx:id="toile" styleClass="toile"/>
+<HBox id="scene" prefHeight="500.0" prefWidth="875.0" spacing="20.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+    <Pane prefHeight="393.0" prefWidth="1098.0">
+        <Circle centerX="200.0" centerY="200.0" layoutX="150.0" layoutY="70.0" radius="200.0" styleClass="toile" />
+        <Circle centerX="200.0" centerY="200.0" layoutX="150.0" layoutY="70.0" radius="150.0" styleClass="toile" />
+        <Circle centerX="200.0" centerY="200.0" layoutX="150.0" layoutY="70.0" radius="100.0" styleClass="toile" />
+        <Circle centerX="200.0" centerY="200.0" layoutX="150.0" layoutY="70.0" radius="50.0" styleClass="toile" />
+        <Group layoutX="195.0" layoutY="195.0" />
+        <Line endX="200" endY="400.0" layoutX="150.0" layoutY="70.0" startX="200.0" startY="0" styleClass="toile" />
+        <Line endX="200.0" endY="400.0" layoutX="150.0" layoutY="70.0" rotate="60.0" startX="200.0" styleClass="toile" />
+        <Line endX="200.0" endY="400.0" layoutX="150.0" layoutY="70.0" rotate="120.0" startX="200.0" styleClass="toile" />
+        <Text layoutX="150.0" layoutY="15.0" text="Compétence 1" x="170" y="50" />
+        <Text layoutX="130.0" layoutY="65.0" text="Compétence 2" x="300" y="100" />
+        <Text layoutX="130.0" layoutY="65.0" text="Compétence 3" x="300" y="300" />
+        <Text layoutX="155.0" layoutY="75.0" text="Compétence 4" x="170" y="410" />
+        <Text layoutX="150.0" layoutY="70.0" text="Compétence 5" x="26" y="300" />
+        <Text layoutX="150.0" layoutY="70.0" text="Compétence 6" x="26" y="99" />
+         <Line endX="5.0" endY="10.0" layoutX="345.0" layoutY="265.0" startX="5.0" styleClass="croix" />
+         <Line endX="10.0" endY="5.0" layoutX="345.0" layoutY="265.0" startY="5.0" styleClass="croix" />
+      <TextField fx:id="comp1" layoutX="785.0" layoutY="50.0" prefHeight="20.0" prefWidth="50.0" />
+      <TextField fx:id="comp2" layoutX="785.0" layoutY="100.0" prefHeight="20.0" prefWidth="50.0" />
+      <TextField fx:id="comp3" layoutX="785.0" layoutY="150.0" prefHeight="20.0" prefWidth="50.0" />
+      <TextField fx:id="comp4" layoutX="785.0" layoutY="200.0" prefHeight="20.0" prefWidth="50.0" />
+      <TextField fx:id="comp5" layoutX="785.0" layoutY="250.0" prefHeight="20.0" prefWidth="50.0" />
+      <TextField fx:id="comp6" layoutX="785.0" layoutY="300.0" prefHeight="20.0" prefWidth="50.0" />
+      <Text layoutX="575.0" layoutY="70.0" text="Compétence 1 - Réaliser" />
+      <Text layoutX="575.0" layoutY="170.0" text="Compétence 3 - Administrer" />
+      <Text layoutX="575.0" layoutY="120.0" text="Compétence 2 - Optimiser" />
+      <Text layoutX="575.0" layoutY="220.0" text="Compétence 4 - Gérer" />
+      <Text layoutX="575.0" layoutY="270.0" text="Compétence 5 - Conduire" />
+      <Text layoutX="575.0" layoutY="320.0" text="Compétence 6 - Collaborer" />
+       <Button fx:id="Tracer" layoutX="670.0" layoutY="440.0" prefHeight="30.0" prefWidth="66.0" text="Tracer" />
+       <Button fx:id="Vider" layoutX="770.0" layoutY="440.0" prefHeight="30.0" prefWidth="66.0" text="Vider" />
     </Pane>
 </HBox>

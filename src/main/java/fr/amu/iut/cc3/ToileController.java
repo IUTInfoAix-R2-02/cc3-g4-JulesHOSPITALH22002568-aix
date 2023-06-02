@@ -17,6 +17,7 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
+import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
 
 import java.net.URL;
@@ -26,10 +27,14 @@ import java.util.ResourceBundle;
 
 public class ToileController implements Initializable {
 
+    @FXML
+    private TextField comp1;
+
     private static int rayonCercleExterieur = 200;
     private static int angleEnDegre = 60;
     private static int angleDepart = 90;
     private static int noteMaximale = 20;
+
 
 
     @Override
@@ -44,6 +49,11 @@ public class ToileController implements Initializable {
     int getYRadarChart(double value, int axe ){
         return (int) (rayonCercleExterieur - Math.sin(Math.toRadians(angleDepart - (axe-1)  * angleEnDegre)) * rayonCercleExterieur
                 *  (value / noteMaximale));
+    }
+    private void Comp1(ActionEvent event) {
+        Circle circle = new Circle();
+        circle.setCenterX(getXRadarChart(15,1));
+        circle.setCenterY(getYRadarChart(15,1));
     }
 
 }
