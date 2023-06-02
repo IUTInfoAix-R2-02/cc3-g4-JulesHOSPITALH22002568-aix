@@ -6,7 +6,7 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<HBox id="scene" prefHeight="500.0" prefWidth="875.0" spacing="20.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+<HBox id="scene" prefHeight="500.0" prefWidth="875.0" spacing="20.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.amu.iut.cc3.ToileController">
     <Pane prefHeight="393.0" prefWidth="1098.0">
         <Circle centerX="200.0" centerY="200.0" layoutX="150.0" layoutY="70.0" radius="200.0" styleClass="toile" />
         <Circle centerX="200.0" centerY="200.0" layoutX="150.0" layoutY="70.0" radius="150.0" styleClass="toile" />
@@ -36,7 +36,7 @@
       <Text layoutX="575.0" layoutY="220.0" text="Compétence 4 - Gérer" />
       <Text layoutX="575.0" layoutY="270.0" text="Compétence 5 - Conduire" />
       <Text layoutX="575.0" layoutY="320.0" text="Compétence 6 - Collaborer" />
-       <Button fx:id="Tracer" layoutX="670.0" layoutY="440.0" prefHeight="30.0" prefWidth="66.0" text="Tracer" />
-       <Button fx:id="Vider" layoutX="770.0" layoutY="440.0" prefHeight="30.0" prefWidth="66.0" text="Vider" />
+       <Button fx:id="Tracer" onAction="#Trace" layoutX="670.0" layoutY="440.0" prefHeight="30.0" prefWidth="66.0" text="Tracer" />
+       <Button fx:id="Vider" onAction="#Vide" layoutX="770.0" layoutY="440.0" prefHeight="30.0" prefWidth="66.0" text="Vider" />
     </Pane>
 </HBox>

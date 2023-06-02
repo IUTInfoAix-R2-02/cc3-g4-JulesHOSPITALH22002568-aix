@@ -12,6 +12,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.HBox;
@@ -29,6 +30,21 @@ public class ToileController implements Initializable {
 
     @FXML
     private TextField comp1;
+
+    @FXML
+    private TextField comp2;
+
+    @FXML
+    private TextField comp3;
+
+    @FXML
+    private TextField comp4;
+
+    @FXML
+    private TextField comp5;
+
+    @FXML
+    private TextField comp6;
 
     private static int rayonCercleExterieur = 200;
     private static int angleEnDegre = 60;
@@ -50,10 +66,30 @@ public class ToileController implements Initializable {
         return (int) (rayonCercleExterieur - Math.sin(Math.toRadians(angleDepart - (axe-1)  * angleEnDegre)) * rayonCercleExterieur
                 *  (value / noteMaximale));
     }
+    @FXML
+    private void Trace(ActionEvent event) {
+        TextField noteField = new TextField();
+        noteField.setOnAction(this::Comp1);
+
+        comp1.getChildrenUnmodifiable().add(noteField);
+    }
+
+    @FXML
+    private void Vide(ActionEvent event) {
+        comp1.clear();
+        comp2.clear();
+        comp3.clear();
+        comp4.clear();
+        comp5.clear();
+        comp6.clear();
+    }
+
     private void Comp1(ActionEvent event) {
         Circle circle = new Circle();
-        circle.setCenterX(getXRadarChart(15,1));
-        circle.setCenterY(getYRadarChart(15,1));
+        int note = Integer.parseInt(comp1.getText());
+        circle.setCenterX(getXRadarChart( note,1));
+        circle.setCenterY(getYRadarChart(note,1));
     }
+
 
 }
